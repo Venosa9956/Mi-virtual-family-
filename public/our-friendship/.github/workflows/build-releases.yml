@@ -1,0 +1,123 @@
+name: Compilar .EXE y .APK (GitHub Releases)
+
+on:
+  push:
+    branches: [ main, master ]
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  # 1. Compilación de ejecutable de Windows (.EXE)
+  build-windows:
+    name: Compilar .EXE para Windows
+    runs-on: windows-latest
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependencias
+        run: npm ci || npm install
+
+      - name: Compilar sitio web estático
+        run: npm run build
+
+      - name: Empaquetar ejecutable .EXE con Nativefier
+        run: |
+          npx --yes nativefier "dist/index.html" --name "OurFriendship2026" --platform "windows" --arch "x64" --single-instance --tray
+          powershell Compress-Archive -Path "OurFriendship2026-win32-x64\*" -DestinationPath "OurFriendship-2026-Windows.zip"
+
+      - name: Subir artefacto Windows
+        uses: actions/upload-artifact@v4
+        with:
+          name: OurFriendship-2026-Windows
+          path: OurFriendship-2026-Windows.zip
+
+  # 2. Compilación de aplicación Android (.APK)
+  build-android:
+    name: Compilar .APK para Android
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Configurar Java JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Configurar Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Instalar dependencias
+        run: npm ci || npm install
+
+      - name: Compilar proyecto web
+        run: npm run build
+
+      - name: Instalar Capacitor para Android
+        run: |
+          npm install @capacitor/core @capacitor/cli @capacitor/android
+          npx cap init "OurFriendship2026" "com.domititan.ourfriendship" --web-dir "dist"
+          npx cap add android
+          npx cap sync android
+
+      - name: Compilar APK en modo Release / Debug
+        run: |
+          cd android
+          chmod +x ./gradlew
+          ./gradlew assembleDebug
+
+      - name: Renombrar APK generado
+        run: |
+          cp android/app/build/outputs/apk/debug/app-debug.apk OurFriendship-2026-Android.apk
+
+      - name: Subir artefacto Android APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: OurFriendship-2026-Android-APK
+          path: OurFriendship-2026-Android.apk
+
+  # 3. Publicación automática en GitHub Releases
+  publish-release:
+    name: Publicar en GitHub Releases
+    needs: [build-windows, build-android]
+    if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar artefacto Windows
+        uses: actions/download-artifact@v4
+        with:
+          name: OurFriendship-2026-Windows
+
+      - name: Descargar artefacto Android
+        uses: actions/download-artifact@v4
+        with:
+          name: OurFriendship-2026-Android-APK
+
+      - name: Crear GitHub Release con .EXE y .APK
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            OurFriendship-2026-Windows.zip
+            OurFriendship-2026-Android.apk
+          name: "Our Friendship 2026 — Descargas (.EXE y .APK)"
+          body: |
+            ## 💜 OUR FRIENDSHIP — THE 2026 ADVENTURE
+            Descargas oficiales listas para instalar:
+            - **`OurFriendship-2026-Windows.zip`**: Ejecutable de escritorio para Windows (.EXE incluido).
+            - **`OurFriendship-2026-Android.apk`**: Instalador para dispositivos Android (.APK).
