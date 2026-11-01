@@ -1,0 +1,6 @@
+{
+  "name": "OUR FRIENDSHIP — 2026",
+  "description": "Un año de risas, muteadas, locuras y una amistad que sigue viva. Videojuego de plataformas 2D y páginas individuales.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
