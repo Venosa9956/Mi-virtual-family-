@@ -28,7 +28,7 @@ export const FRIENDS_DATA: Record<string, FriendProfile> = {
     quote: 'Gracias por todas las muteadas, Bendy. Nunca entendiste que me hacían más gracia que cualquier otra cosa JAJAJA.',
     color: '#ea580c',
     accentColor: '#fb923c',
-    unlockStage: 4,
+    unlockStage: 3,
     description: 'El hermano mayor de nuestro grupo virtual. Administrador supremo del server de Discord y portador del botón de mute más rápido del oeste.',
     tags: ['Rey del Mute', 'Hermano Mayor', 'Admin Discord', 'Legendario']
   },
@@ -45,19 +45,6 @@ export const FRIENDS_DATA: Record<string, FriendProfile> = {
     description: 'The Sun Cat. Pura energía radiante, dibujos geniales, risas compartidas y momentos inolvidables que iluminaron cada llamada.',
     tags: ['The Sun Cat', 'Artista', 'Radiante', 'Buena Vibra']
   },
-  mini: {
-    id: 'mini',
-    name: 'Mini',
-    nickname: 'Estrellita',
-    role: 'Corazón Dulce de la Familia',
-    avatar: '/assets/characters/mini.jpg',
-    quote: 'La ternura y las risas espontáneas que unieron a esta familia en 2026.',
-    color: '#a855f7',
-    accentColor: '#e9d5ff',
-    unlockStage: 2,
-    description: 'Una integrante única y entrañable. Siempre trayendo momentos divertidos, amabilidad y compañía genuina a nuestras tardes.',
-    tags: ['Estrellita', 'Amabilidad', 'Risas', 'Inolvidable']
-  },
   efra: {
     id: 'efra',
     name: 'Efra',
@@ -67,7 +54,7 @@ export const FRIENDS_DATA: Record<string, FriendProfile> = {
     quote: 'Con fuego en el espíritu y siempre al pie del cañón para el desmadre con los panas.',
     color: '#dc2626',
     accentColor: '#f87171',
-    unlockStage: 3,
+    unlockStage: 2,
     description: 'El fiero y noble guerrero con melena de fuego. Jamás faltó a una noche de bromas épicas y desvelos inolvidables.',
     tags: ['Lobo Ígneo', 'Leal', 'Bromista Épico', 'Guerrero']
   }
@@ -111,15 +98,6 @@ export const INITIAL_MEMORIES: MemoryItem[] = [
     likes: 29
   },
   {
-    id: 'mem-5',
-    author: 'Mini',
-    title: 'Risas Inesperadas en Grupo',
-    content: 'Mini soltando comentarios en el momento más inesperado que hacían que todos tuviéramos que mutearnos del ataque de risa que nos daba.',
-    date: 'Octubre 2026',
-    category: 'momento',
-    likes: 34
-  },
-  {
     id: 'mem-6',
     author: 'Domititan',
     title: 'Seguimos Juntos al Final de 2026',
@@ -152,14 +130,6 @@ export const INITIAL_GALLERY: GalleryItem[] = [
     title: 'Sunny — The Sun Cat',
     caption: 'Energía radiante y luz cálida para todo el equipo.',
     imageUrl: '/assets/characters/sunny.png',
-    date: '2026',
-    category: 'Personajes'
-  },
-  {
-    id: 'gal-4',
-    title: 'Mini — Dulzura y Alegría',
-    caption: 'Nuestra compañera celestial llena de ternura y risas compartidas.',
-    imageUrl: '/assets/characters/mini.jpg',
     date: '2026',
     category: 'Personajes'
   },
@@ -215,36 +185,36 @@ export const storage = {
         reward = { unlockedName: 'Página de Sunny (The Sun Cat)', description: '¡Has desbloqueado el homenaje individual de Sunny!' };
         break;
       case 2:
-        if (!progress.unlockedPages.includes('mini')) progress.unlockedPages.push('mini');
-        reward = { unlockedName: 'Página de Mini', description: '¡Has desbloqueado el homenaje individual de Mini!' };
+        if (!progress.unlockedPages.includes('efra')) progress.unlockedPages.push('efra');
+        reward = { unlockedName: 'Página de Efra (Lobo de Fuego)', description: '¡Has desbloqueado el homenaje al lobo de fuego Efra!' };
         break;
       case 3:
-        if (!progress.unlockedPages.includes('efra')) progress.unlockedPages.push('efra');
-        reward = { unlockedName: 'Página de Efra', description: '¡Has desbloqueado el homenaje al lobo de fuego Efra!' };
-        break;
-      case 4:
         if (!progress.unlockedPages.includes('bendy')) progress.unlockedPages.push('bendy');
         reward = { unlockedName: 'Página de Bendy (El Rey del Mute)', description: '¡Has desbloqueado el homenaje al mayor de la familia!' };
         break;
-      case 5:
+      case 4:
         if (!progress.unlockedPages.includes('recuerdos')) progress.unlockedPages.push('recuerdos');
         reward = { unlockedName: 'Colección de Recuerdos 2026', description: '¡Archivo histórico de risas y anécdotas desbloqueado!' };
         break;
-      case 6:
+      case 5:
         if (!progress.unlockedPages.includes('galeria')) progress.unlockedPages.push('galeria');
         reward = { unlockedName: 'Galería Secreta de Discord', description: '¡Acceso a las fotos y momentos especiales!' };
         break;
-      case 7:
+      case 6:
         if (!progress.unlockedPages.includes('domititan_secreto')) progress.unlockedPages.push('domititan_secreto');
         reward = { unlockedName: 'Bóveda Secreta de Domititan', description: '¡Secretos del gato morado con cabeza de TV!' };
         break;
-      case 8:
+      case 7:
         if (!progress.unlockedPages.includes('estrellas')) progress.unlockedPages.push('estrellas');
         reward = { unlockedName: 'Reino Cósmico de la Amistad', description: '¡Mensajes estelares para la posteridad!' };
         break;
-      case 9:
+      case 8:
         if (!progress.unlockedPages.includes('momentos')) progress.unlockedPages.push('momentos');
         reward = { unlockedName: 'Recopilación Épica de Momentos', description: '¡El resumen de oro de nuestro año!' };
+        break;
+      case 9:
+        if (!progress.unlockedPages.includes('comunidad')) progress.unlockedPages.push('comunidad');
+        reward = { unlockedName: 'El Gran Pacto de Amistad', description: '¡Los 4 amigos listos para la batalla final!' };
         break;
       case 10:
         progress.finalBossDefeated = true;

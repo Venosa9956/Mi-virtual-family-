@@ -17,7 +17,6 @@ Incluye videojuego de plataformas de 10 etapas con 10 jefes, páginas web indivi
 - **Domititan 💤🌙📺**: Gato morado con cabeza de televisor, creador de la aventura y víctima favorita del mute.
 - **Bendy 👑🔇**: El mayor de la familia virtual, dueño del server de Discord y "El Rey del Mute".
 - **Sunny ☀️🐱**: "The Sun Cat", arte genial, energía positiva y risas interminables.
-- **Mini ✨💜**: Integrante dulce, entrañable y divertida con momentos únicos en el grupo.
 - **Efra 🐺🔥**: El leal guerrero lobo de fuego, bromas épicas y desvelos inolvidables.
 
 ---
@@ -27,14 +26,14 @@ Un juego de plataformas 2D lateral inspirado en los clásicos pero 100% original
 
 ### 🌟 10 Mundos y 10 Jefes
 1. **Bosque de la Amistad** — Jefe: *Sprout Guardian* (Desbloquea la página de Sunny).
-2. **Reino de las Bromas** — Jefe: *El Bromista Espectral* (Desbloquea la página de Mini).
-3. **Montañas del Discord** — Jefe: *Glitch Server Bot* (Desbloquea la página de Efra).
-4. **Castillo del Silencio** — Jefe: *El Mute Supremo* (Desbloquea la página de Bendy).
-5. **Valle de las Risas** — Jefe: *Gigante de la Risa* (Desbloquea Colección de Recuerdos).
-6. **Ciudad de los Recuerdos** — Jefe: *Memory Phantom* (Desbloquea Galería Secreta).
-7. **Caverna de las Aventuras** — Jefe: *Dragón de Cristal* (Desbloquea Bóveda de Domititan).
-8. **Reino de las Estrellas** — Jefe: *Titán Estelar* (Desbloquea Mensajes Cósmicos).
-9. **Fortaleza del Caos** — Jefe: *Chaos Overlord* (Desbloquea Recopilación Épica).
+2. **Montañas del Discord** — Jefe: *Glitch Server Bot* (Desbloquea la página de Efra).
+3. **Castillo del Silencio** — Jefe: *El Mute Supremo* (Desbloquea la página de Bendy).
+4. **Reino de las Bromas** — Jefe: *El Bromista Espectral* (Desbloquea Colección de Recuerdos).
+5. **Valle de las Risas** — Jefe: *Gigante de la Risa* (Desbloquea Galería Secreta).
+6. **Ciudad de los Recuerdos** — Jefe: *Memory Phantom* (Desbloquea Bóveda de Domititan).
+7. **Caverna de las Aventuras** — Jefe: *Dragón de Cristal* (Desbloquea Reino de las Estrellas).
+8. **Reino de las Estrellas** — Jefe: *Titán Estelar* (Desbloquea Recopilación Épica).
+9. **Fortaleza del Caos** — Jefe: *Chaos Overlord* (Desbloquea El Gran Pacto de Amistad).
 10. **El Último Capítulo** — Jefe Final: *Arbiter 2026* (Desbloquea el Gran Homenaje Final 2026 -> 2027).
 
 ### 🕹️ Controles
@@ -396,7 +395,7 @@ window.audioSFX = new WebAudioSFX();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OUR FRIENDSHIP — 2026</title>
-  <meta name="description" content="Un año de risas, muteadas, locuras y una amistad que sigue viva. Domititan, Bendy, Sunny, Mini y Efra.">
+  <meta name="description" content="Un año de risas, muteadas, locuras y una amistad que sigue viva. Domititan, Bendy, Sunny y Efra.">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/sound.js"></script>
 </head>
@@ -411,7 +410,6 @@ window.audioSFX = new WebAudioSFX();
         <a href="domititan.html">Domititan</a>
         <a href="bendy.html">Bendy</a>
         <a href="sunny.html">Sunny</a>
-        <a href="mini.html">Mini</a>
         <a href="efra.html">Efra</a>
         <a href="juego.html" class="cta-btn">JUGAR NUESTRA AVENTURA 🎮</a>
       </nav>
@@ -473,19 +471,6 @@ window.audioSFX = new WebAudioSFX();
           </div>
         </a>
 
-        <!-- Mini -->
-        <a href="mini.html" class="friend-card">
-          <div class="card-img-wrap">
-            <img src="assets/characters/mini.jpg" alt="Mini">
-          </div>
-          <div class="card-body">
-            <div class="card-name">Mini ✨💜</div>
-            <div class="card-role">Corazón Dulce de la Familia</div>
-            <div class="card-quote">«Momentos espontáneos, risas y la ternura que une a esta familia».</div>
-            <div style="font-weight: 600; color: #e9d5ff;">Ver Página de Mini →</div>
-          </div>
-        </a>
-
         <!-- Efra -->
         <a href="efra.html" class="friend-card">
           <div class="card-img-wrap">
@@ -508,7 +493,7 @@ window.audioSFX = new WebAudioSFX();
         «Me muteaban y yo me cagaba de risa. Creo que nunca entendieron que era parte de la diversión JAJAJA».
       </blockquote>
       <p style="color: var(--text-muted); line-height: 1.7;">
-        Las llamadas eternas en el servidor de Bendy, las advertencias con el rol silenciado, las risas contagiosas de Sunny, las bromas de Efra, las ocurrencias de Mini y Domititan transmitiendo locuras con su cabeza de televisor. Todo esto hizo de 2026 un año legendario para nosotros.
+        Las llamadas eternas en el servidor de Bendy, las advertencias con el rol silenciado, las risas contagiosas de Sunny, las bromas de Efra y Domititan transmitiendo locuras con su cabeza de televisor. Todo esto hizo de 2026 un año legendario para nosotros.
       </p>
     </section>
   </main>
@@ -546,7 +531,6 @@ window.audioSFX = new WebAudioSFX();
         <a href="domititan.html">Domititan</a>
         <a href="bendy.html" class="active">Bendy</a>
         <a href="sunny.html">Sunny</a>
-        <a href="mini.html">Mini</a>
         <a href="efra.html">Efra</a>
         <a href="juego.html" class="cta-btn">JUGAR 🎮</a>
       </nav>
@@ -617,7 +601,6 @@ window.audioSFX = new WebAudioSFX();
         <a href="domititan.html" class="active">Domititan</a>
         <a href="bendy.html">Bendy</a>
         <a href="sunny.html">Sunny</a>
-        <a href="mini.html">Mini</a>
         <a href="efra.html">Efra</a>
         <a href="juego.html" class="cta-btn">JUGAR 🎮</a>
       </nav>
@@ -677,7 +660,6 @@ window.audioSFX = new WebAudioSFX();
         <a href="domititan.html">Domititan</a>
         <a href="bendy.html">Bendy</a>
         <a href="sunny.html" class="active">Sunny</a>
-        <a href="mini.html">Mini</a>
         <a href="efra.html">Efra</a>
         <a href="juego.html" class="cta-btn">JUGAR 🎮</a>
       </nav>
@@ -710,58 +692,7 @@ window.audioSFX = new WebAudioSFX();
 </html>`;
   zip.file('sunny.html', sunnyHtml);
 
-  // 6. mini.html
-  const miniHtml = `<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini — Corazón Dulce | OUR FRIENDSHIP 2026</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/sound.js"></script>
-</head>
-<body>
-  <header>
-    <div class="header-inner">
-      <a href="index.html" class="brand-link"><span>← Volver al Menú</span></a>
-      <nav>
-        <a href="domititan.html">Domititan</a>
-        <a href="bendy.html">Bendy</a>
-        <a href="sunny.html">Sunny</a>
-        <a href="mini.html" class="active">Mini</a>
-        <a href="efra.html">Efra</a>
-        <a href="juego.html" class="cta-btn">JUGAR 🎮</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container" style="max-width: 900px;">
-    <div style="display: flex; gap: 32px; align-items: center; flex-wrap: wrap; margin-top: 30px;">
-      <div style="width: 280px; height: 380px; background: #130a21; border-radius: 16px; border: 2px solid #a855f7; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-        <img src="assets/characters/mini.jpg" alt="Mini" style="max-height: 100%; object-fit: contain;">
-      </div>
-      <div style="flex: 1; min-width: 300px;">
-        <span style="color: #c084fc; font-weight: 700; text-transform: uppercase; font-size: 0.85rem;">Página Individual</span>
-        <h1 style="font-size: 2.8rem; margin: 6px 0;">Mini</h1>
-        <p style="color: #e9d5ff; font-size: 1.15rem; margin-bottom: 16px;">Amabilidad, Dulzura y Risas Compartidas</p>
-        <p style="color: var(--text-muted); line-height: 1.7;">
-          Una página conmemorativa individual dedicada a Mini. Su humor espontáneo y su presencia siempre nos sacaron sonrisas en los momentos más inesperados del año.
-        </p>
-      </div>
-    </div>
-
-    <section style="background: var(--bg-card); border-radius: 16px; border: 1px solid rgba(168, 85, 247, 0.3); padding: 28px; margin-top: 32px;">
-      <h3 style="font-size: 1.5rem; margin-bottom: 16px; color: #c084fc;">Recuerdos y Momentos con Mini</h3>
-      <p style="color: var(--text-muted); line-height: 1.8;">
-        Esta sección está abierta para seguir sumando anécdotas, capturas y momentos compartidos durante nuestras sesiones de juego y charlas en 2026. ¡Gracias por ser parte indispensable de esta familia!
-      </p>
-    </section>
-  </main>
-</body>
-</html>`;
-  zip.file('mini.html', miniHtml);
-
-  // 7. efra.html
+  // 6. efra.html
   const efraHtml = `<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -779,7 +710,6 @@ window.audioSFX = new WebAudioSFX();
         <a href="domititan.html">Domititan</a>
         <a href="bendy.html">Bendy</a>
         <a href="sunny.html">Sunny</a>
-        <a href="mini.html">Mini</a>
         <a href="efra.html" class="active">Efra</a>
         <a href="juego.html" class="cta-btn">JUGAR 🎮</a>
       </nav>
@@ -876,7 +806,6 @@ window.audioSFX = new WebAudioSFX();
     { name: 'assets/characters/bendy.png', path: '/assets/characters/bendy.png' },
     { name: 'assets/characters/sunny.png', path: '/assets/characters/sunny.png' },
     { name: 'assets/characters/efra.png', path: '/assets/characters/efra.png' },
-    { name: 'assets/characters/mini.jpg', path: '/assets/characters/mini.jpg' },
   ];
 
   for (const f of charFiles) {
@@ -897,14 +826,14 @@ const ctx = canvas.getContext('2d');
 
 const STAGES = [
   { id: 1, name: 'Bosque de la Amistad', boss: 'Sprout Guardian', unlock: 'sunny', color: '#10b981', sky: '#064e3b' },
-  { id: 2, name: 'Reino de las Bromas', boss: 'El Bromista Espectral', unlock: 'mini', color: '#8b5cf6', sky: '#4c1d95' },
-  { id: 3, name: 'Montañas del Discord', boss: 'Glitch Server Bot', unlock: 'efra', color: '#3b82f6', sky: '#1e3a8a' },
-  { id: 4, name: 'Castillo del Silencio', boss: 'El Mute Supremo', unlock: 'bendy', color: '#ea580c', sky: '#7c2d12' },
-  { id: 5, name: 'Valle de las Risas', boss: 'Gigante de la Risa', unlock: 'recuerdos', color: '#f59e0b', sky: '#78350f' },
-  { id: 6, name: 'Ciudad de los Recuerdos', boss: 'Memory Phantom', unlock: 'galeria', color: '#ec4899', sky: '#831843' },
-  { id: 7, name: 'Caverna de las Aventuras', boss: 'Dragón de Cristal', unlock: 'domititan_secreto', color: '#06b6d4', sky: '#164e63' },
-  { id: 8, name: 'Reino de las Estrellas', boss: 'Titán Estelar', unlock: 'estrellas', color: '#6366f1', sky: '#312e81' },
-  { id: 9, name: 'Fortaleza del Caos', boss: 'Chaos Overlord', unlock: 'momentos', color: '#ef4444', sky: '#7f1d1d' },
+  { id: 2, name: 'Montañas del Discord', boss: 'Glitch Server Bot', unlock: 'efra', color: '#3b82f6', sky: '#1e3a8a' },
+  { id: 3, name: 'Castillo del Silencio', boss: 'El Mute Supremo', unlock: 'bendy', color: '#ea580c', sky: '#7c2d12' },
+  { id: 4, name: 'Reino de las Bromas', boss: 'El Bromista Espectral', unlock: 'recuerdos', color: '#8b5cf6', sky: '#4c1d95' },
+  { id: 5, name: 'Valle de las Risas', boss: 'Gigante de la Risa', unlock: 'galeria', color: '#f59e0b', sky: '#78350f' },
+  { id: 6, name: 'Ciudad de los Recuerdos', boss: 'Memory Phantom', unlock: 'domititan_secreto', color: '#ec4899', sky: '#831843' },
+  { id: 7, name: 'Caverna de las Aventuras', boss: 'Dragón de Cristal', unlock: 'estrellas', color: '#06b6d4', sky: '#164e63' },
+  { id: 8, name: 'Reino de las Estrellas', boss: 'Titán Estelar', unlock: 'momentos', color: '#6366f1', sky: '#312e81' },
+  { id: 9, name: 'Fortaleza del Caos', boss: 'Chaos Overlord', unlock: 'comunidad', color: '#ef4444', sky: '#7f1d1d' },
   { id: 10, name: 'El Último Capítulo', boss: 'The 2026 Arbiter', unlock: 'homenaje_final', color: '#a855f7', sky: '#2e1065' }
 ];
 

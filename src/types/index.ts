@@ -1,5 +1,5 @@
 export interface FriendProfile {
-  id: 'bendy' | 'domititan' | 'sunny' | 'mini' | 'efra';
+  id: 'bendy' | 'domititan' | 'sunny' | 'efra';
   name: string;
   nickname: string;
   role: string;

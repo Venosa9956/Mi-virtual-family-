@@ -68,14 +68,6 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenZ
             Sunny ☀️
           </button>
           <button
-            onClick={() => onNavigate('mini')}
-            className={`transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
-              currentPage === 'mini' ? 'text-white font-semibold underline underline-offset-8 decoration-[#a855f7]' : 'hover:text-white'
-            }`}
-          >
-            Mini ✨
-          </button>
-          <button
             onClick={() => onNavigate('efra')}
             className={`transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
               currentPage === 'efra' ? 'text-white font-semibold underline underline-offset-8 decoration-[#dc2626]' : 'hover:text-white'
@@ -155,12 +147,6 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenZ
           className={`whitespace-nowrap px-2 py-1 rounded ${currentPage === 'sunny' ? 'text-white bg-[#2e1065]' : ''}`}
         >
           Sunny
-        </button>
-        <button
-          onClick={() => onNavigate('mini')}
-          className={`whitespace-nowrap px-2 py-1 rounded ${currentPage === 'mini' ? 'text-white bg-[#2e1065]' : ''}`}
-        >
-          Mini
         </button>
         <button
           onClick={() => onNavigate('efra')}
