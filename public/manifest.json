@@ -2,7 +2,7 @@
   "id": "/",
   "name": "OUR FRIENDSHIP — 2026",
   "short_name": "Friendship26",
-  "description": "Un año de risas, muteadas, locuras y una amistad que sigue viva. Domititan, Bendy, Sunny, Mini y Efra.",
+  "description": "Un año de risas, muteadas, locuras y una amistad que sigue viva. Domititan, Bendy, Sunny, Galletita y Efra.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -21,6 +21,12 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

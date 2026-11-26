@@ -3,6 +3,7 @@ import { Gamepad2, Download, Lock, Unlock, Heart, Plus, Sparkles, MessageSquare,
 import { FRIENDS_DATA, storage } from '../services/storageService';
 import { MemoryItem, GalleryItem, GameProgress } from '../types';
 import { sound } from '../services/soundService';
+import { PWAInstallButton } from '../components/PWAInstallButton';
 
 interface HomePageProps {
   onNavigate: (page: string) => void;
@@ -127,6 +128,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenZipModal }
               <Download className="w-5 h-5 text-[#c084fc]" />
               <span>Descargar Proyecto ZIP (.zip)</span>
             </button>
+
+            <PWAInstallButton variant="hero" />
           </div>
 
           {/* Progress / Free Mode Bar */}

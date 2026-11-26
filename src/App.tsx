@@ -8,6 +8,7 @@ import { GalletitaPage } from './pages/GalletitaPage';
 import { EfraPage } from './pages/EfraPage';
 import { GamePage } from './pages/GamePage';
 import { ZipDownloadModal } from './components/ZipDownloadModal';
+import { OfflineIndicator } from './components/OfflineIndicator';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<string>('index');
@@ -85,6 +86,8 @@ export default function App() {
         isOpen={isZipModalOpen}
         onClose={() => setIsZipModalOpen(false)}
       />
+
+      <OfflineIndicator />
     </div>
   );
 }

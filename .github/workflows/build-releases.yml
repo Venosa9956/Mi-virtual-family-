@@ -15,6 +15,7 @@ jobs:
   build-windows:
     name: Compilar .EXE para Windows
     runs-on: windows-latest
+    timeout-minutes: 20
     steps:
       - name: Clonar repositorio
         uses: actions/checkout@v4
@@ -24,11 +25,16 @@ jobs:
         with:
           node-version: 20
 
-      - name: Instalar dependencias
-        run: npm ci || npm install
-
-      - name: Compilar sitio web estático
-        run: npm run build
+      - name: Preparar archivos web
+        shell: bash
+        run: |
+          if [ -f package.json ]; then
+            npm ci || npm install
+            npx vite build --base=./
+          else
+            mkdir -p dist
+            cp -r *.html css js assets manifest.json *.png dist/ 2>/dev/null || true
+          fi
 
       - name: Empaquetar ejecutable .EXE con Nativefier
         run: |
@@ -45,6 +51,7 @@ jobs:
   build-android:
     name: Compilar .APK para Android
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Clonar repositorio
         uses: actions/checkout@v4
@@ -60,27 +67,42 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
-      - name: Configurar Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Instalar dependencias
-        run: npm ci || npm install
-
-      - name: Compilar proyecto web
-        run: npm run build
-
-      - name: Instalar Capacitor para Android
+      - name: Verificar Android SDK preinstalado
         run: |
-          npm install @capacitor/core @capacitor/cli @capacitor/android
-          npx cap init "OurFriendship2026" "com.domititan.ourfriendship" --web-dir "dist"
+          SDK_DIR="${ANDROID_HOME:-/usr/local/lib/android/sdk}"
+          echo "ANDROID_HOME=$SDK_DIR" >> $GITHUB_ENV
+          echo "ANDROID_SDK_ROOT=$SDK_DIR" >> $GITHUB_ENV
+          mkdir -p "$SDK_DIR/licenses"
+          echo -e "\n24333f8a63b6825ea9c5514f83c2829b004d1fee\nd56f5187479451eabf01fb78af6dfcb131a6481e" > "$SDK_DIR/licenses/android-sdk-license"
+          echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$SDK_DIR/licenses/android-sdk-preview-license"
+          ls -la "$SDK_DIR/platforms" || true
+
+      - name: Preparar compilación web
+        run: |
+          if [ -f package.json ]; then
+            npm ci || npm install
+            npm run build
+          else
+            npm init -y
+            mkdir -p dist
+            cp -r *.html css js assets manifest.json *.png dist/ 2>/dev/null || true
+          fi
+
+      - name: Instalar Capacitor 6 para Android
+        env:
+          CI: true
+        run: |
+          npm install @capacitor/core@6 @capacitor/cli@6 @capacitor/android@6
+          node -e "require('fs').writeFileSync('capacitor.config.json', JSON.stringify({appId:'com.domititan.ourfriendship',appName:'OurFriendship2026',webDir:'dist',bundledWebRuntime:false}, null, 2))"
+          rm -rf android
           npx cap add android
           npx cap sync android
 
-      - name: Compilar APK en modo Release / Debug
+      - name: Compilar APK con Gradle
         run: |
           cd android
           chmod +x ./gradlew
-          ./gradlew assembleDebug
+          ./gradlew assembleDebug --no-daemon
 
       - name: Renombrar APK generado
         run: |
@@ -96,10 +118,11 @@ jobs:
   publish-release:
     name: Publicar en GitHub Releases
     needs: [build-windows, build-android]
-    if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'workflow_dispatch'
+    if: always() && needs.build-android.result == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Descargar artefacto Windows
+        if: needs.build-windows.result == 'success'
         uses: actions/download-artifact@v4
         with:
           name: OurFriendship-2026-Windows
@@ -112,12 +135,14 @@ jobs:
       - name: Crear GitHub Release con .EXE y .APK
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: v2026-${{ github.run_number }}
           files: |
-            OurFriendship-2026-Windows.zip
             OurFriendship-2026-Android.apk
-          name: "Our Friendship 2026 — Descargas (.EXE y .APK)"
+            OurFriendship-2026-Windows.zip
+          fail_on_unmatched_files: false
+          name: "Our Friendship 2026 — Descargas (Build #${{ github.run_number }})"
           body: |
             ## 💜 OUR FRIENDSHIP — THE 2026 ADVENTURE
-            Descargas oficiales listas para instalar:
-            - **`OurFriendship-2026-Windows.zip`**: Ejecutable de escritorio para Windows (.EXE incluido).
+            Descargas listas para instalar:
             - **`OurFriendship-2026-Android.apk`**: Instalador para dispositivos Android (.APK).
+            - **`OurFriendship-2026-Windows.zip`**: Ejecutable de escritorio para Windows (.EXE incluido).

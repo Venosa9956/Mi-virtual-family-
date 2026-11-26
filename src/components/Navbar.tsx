@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Volume2, VolumeX, Music, Download, Gamepad2 } from 'lucide-react';
 import { sound } from '../services/soundService';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface NavbarProps {
   currentPage: string;
@@ -109,6 +110,9 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenZ
             {isMuted ? <VolumeX className="w-4 h-4 text-red-400" /> : <Volume2 className="w-4 h-4 text-emerald-400" />}
           </button>
 
+          {/* Install PWA */}
+          <PWAInstallButton variant="compact" />
+
           {/* Download ZIP */}
           <button
             onClick={onOpenZipModal}
@@ -168,6 +172,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenZ
         >
           Efra
         </button>
+        <PWAInstallButton variant="mobile" />
         <button
           onClick={onOpenZipModal}
           className="whitespace-nowrap px-2 py-1 rounded text-[#c084fc] font-semibold"
