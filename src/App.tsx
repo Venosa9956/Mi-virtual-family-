@@ -4,6 +4,7 @@ import { HomePage } from './pages/HomePage';
 import { BendyPage } from './pages/BendyPage';
 import { DomititanPage } from './pages/DomititanPage';
 import { SunnyPage } from './pages/SunnyPage';
+import { GalletitaPage } from './pages/GalletitaPage';
 import { EfraPage } from './pages/EfraPage';
 import { GamePage } from './pages/GamePage';
 import { ZipDownloadModal } from './components/ZipDownloadModal';
@@ -19,6 +20,7 @@ export default function App() {
       if (path.includes('bendy')) setCurrentPage('bendy');
       else if (path.includes('domititan')) setCurrentPage('domititan');
       else if (path.includes('sunny')) setCurrentPage('sunny');
+      else if (path.includes('galletita')) setCurrentPage('galletita');
       else if (path.includes('efra')) setCurrentPage('efra');
       else if (path.includes('juego')) setCurrentPage('juego');
       else setCurrentPage('index');
@@ -39,6 +41,7 @@ export default function App() {
       domititan: '/domititan.html',
       bendy: '/bendy.html',
       sunny: '/sunny.html',
+      galletita: '/galletita.html',
       efra: '/efra.html',
       juego: '/juego.html',
     };
@@ -67,6 +70,7 @@ export default function App() {
         {currentPage === 'bendy' && <BendyPage onNavigate={handleNavigate} />}
         {currentPage === 'domititan' && <DomititanPage onNavigate={handleNavigate} />}
         {currentPage === 'sunny' && <SunnyPage onNavigate={handleNavigate} />}
+        {currentPage === 'galletita' && <GalletitaPage onNavigate={handleNavigate} />}
         {currentPage === 'efra' && <EfraPage onNavigate={handleNavigate} />}
         {currentPage === 'juego' && (
           <GamePage

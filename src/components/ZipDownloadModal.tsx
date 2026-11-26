@@ -136,7 +136,7 @@ export const ZipDownloadModal: React.FC<ZipModalProps> = ({ isOpen, onClose }) =
                 Listo para descomprimir y subir a GitHub:
               </div>
               <p>
-                Al subir la carpeta a tu repositorio en GitHub, se activará <strong>GitHub Pages</strong> automáticamente y podrás compartir el enlace web con Bendy, Sunny, Mini y Efra.
+                Al subir la carpeta a tu repositorio en GitHub, se activará <strong>GitHub Pages</strong> automáticamente y podrás compartir el enlace web con Bendy, Sunny, Galletita y Efra.
               </p>
             </div>
           </div>

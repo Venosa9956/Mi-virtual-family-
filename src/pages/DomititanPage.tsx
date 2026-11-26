@@ -31,7 +31,7 @@ export const DomititanPage: React.FC<DomititanPageProps> = ({ onNavigate }) => {
     {
       channel: 'CANAL 04: GRATITUD',
       title: 'Mi Familia Virtual',
-      text: 'No hay mejores compañeros para pasar un año entero. Bendy con sus mutes, Sunny con sus soles y arte, Mini con su dulzura y risas, Efra con su fuego guerrero. Son lo mejor que me pasó en 2026.',
+      text: 'No hay mejores compañeros para pasar un año entero. Bendy con sus mutes, Sunny con sus soles y arte, Galletita siempre presente en la familia, Efra con su fuego guerrero. Son lo mejor que me pasó en 2026.',
       color: '#f472b6',
     },
   ];

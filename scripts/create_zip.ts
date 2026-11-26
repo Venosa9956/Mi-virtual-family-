@@ -29,6 +29,7 @@ Incluye videojuego de plataformas de 10 etapas con 10 jefes, páginas web indivi
 - **Domititan 💤🌙📺**: Gato morado con cabeza de televisor, creador de la aventura y víctima favorita del mute.
 - **Bendy 👑🔇**: El mayor de la familia virtual, dueño del server de Discord y "El Rey del Mute".
 - **Sunny ☀️🐱**: "The Sun Cat", arte genial, energía positiva y risas interminables.
+- **Galletita 🍪❤️**: Integrante especial de la familia con su bufanda roja y página editable.
 - **Efra 🐺🔥**: El leal guerrero lobo de fuego, bromas épicas y desvelos inolvidables.
 
 ---
@@ -38,14 +39,14 @@ Un juego de plataformas 2D lateral inspirado en los clásicos pero 100% original
 
 ### 🌟 10 Mundos y 10 Jefes
 1. **Bosque de la Amistad** — Jefe: *Sprout Guardian* (Desbloquea la página de Sunny).
-2. **Montañas del Discord** — Jefe: *Glitch Server Bot* (Desbloquea la página de Efra).
-3. **Castillo del Silencio** — Jefe: *El Mute Supremo* (Desbloquea la página de Bendy).
-4. **Reino de las Bromas** — Jefe: *El Bromista Espectral* (Desbloquea Colección de Recuerdos).
-5. **Valle de las Risas** — Jefe: *Gigante de la Risa* (Desbloquea Galería Secreta).
-6. **Ciudad de los Recuerdos** — Jefe: *Memory Phantom* (Desbloquea Bóveda de Domititan).
-7. **Caverna de las Aventuras** — Jefe: *Dragón de Cristal* (Desbloquea Mensajes Cósmicos).
-8. **Reino de las Estrellas** — Jefe: *Titán Estelar* (Desbloquea Recopilación Épica).
-9. **Fortaleza del Caos** — Jefe: *Chaos Overlord* (Desbloquea Bóveda de Comunidad).
+2. **Reino de las Bromas** — Jefe: *El Bromista Espectral* (Desbloquea la página de Galletita).
+3. **Montañas del Discord** — Jefe: *Glitch Server Bot* (Desbloquea la página de Efra).
+4. **Castillo del Silencio** — Jefe: *El Mute Supremo* (Desbloquea la página de Bendy).
+5. **Valle de las Risas** — Jefe: *Gigante de la Risa* (Desbloquea Colección de Recuerdos).
+6. **Ciudad de los Recuerdos** — Jefe: *Memory Phantom* (Desbloquea Galería Secreta).
+7. **Caverna de las Aventuras** — Jefe: *Dragón de Cristal* (Desbloquea Bóveda de Domititan).
+8. **Reino de las Estrellas** — Jefe: *Titán Estelar* (Desbloquea Mensajes Cósmicos).
+9. **Fortaleza del Caos** — Jefe: *Chaos Overlord* (Desbloquea Recopilación Épica).
 10. **El Último Capítulo** — Jefe Final: *Arbiter 2026* (Desbloquea el Gran Homenaje Final 2026 -> 2027).
 
 ### 🕹️ Controles
@@ -315,7 +316,7 @@ const indexHtml = `<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OUR FRIENDSHIP — 2026</title>
-  <meta name="description" content="Un año de risas, muteadas, locuras y una amistad que sigue viva. Domititan, Bendy, Sunny y Efra.">
+  <meta name="description" content="Un año de risas, muteadas, locuras y una amistad que sigue viva. Domititan, Bendy, Sunny, Galletita y Efra.">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/sound.js"></script>
 </head>
@@ -330,6 +331,7 @@ const indexHtml = `<!DOCTYPE html>
         <a href="domititan.html">Domititan</a>
         <a href="bendy.html">Bendy</a>
         <a href="sunny.html">Sunny</a>
+        <a href="galletita.html">Galletita</a>
         <a href="efra.html">Efra</a>
         <a href="juego.html" class="cta-btn">JUGAR NUESTRA AVENTURA 🎮</a>
       </nav>
@@ -388,6 +390,18 @@ const indexHtml = `<!DOCTYPE html>
           </div>
         </a>
 
+        <a href="galletita.html" class="friend-card">
+          <div class="card-img-wrap">
+            <img src="assets/characters/galletita.png" alt="Galletita">
+          </div>
+          <div class="card-body">
+            <div class="card-name">Galletita 🍪❤️</div>
+            <div class="card-role">Integrante Especial de la Familia</div>
+            <div class="card-quote">«Con su icónica bufanda roja y un espacio editable para sus recuerdos de 2026».</div>
+            <div style="font-weight: 600; color: #fb7185;">Ver Página de Galletita →</div>
+          </div>
+        </a>
+
         <a href="efra.html" class="friend-card">
           <div class="card-img-wrap">
             <img src="assets/characters/efra.png" alt="Efra">
@@ -408,7 +422,7 @@ const indexHtml = `<!DOCTYPE html>
         «Me muteaban y yo me cagaba de risa. Creo que nunca entendieron que era parte de la diversión JAJAJA».
       </blockquote>
       <p style="color: var(--text-muted); line-height: 1.7;">
-        Las llamadas eternas en el servidor de Bendy, las advertencias con el rol silenciado, las risas contagiosas de Sunny, las bromas de Efra y Domititan transmitiendo locuras con su cabeza de televisor. Todo esto hizo de 2026 un año legendario para nosotros.
+        Las llamadas eternas en el servidor de Bendy, las advertencias con el rol silenciado, las risas contagiosas de Sunny, los momentos con Galletita, las bromas de Efra y Domititan transmitiendo locuras con su cabeza de televisor. Todo esto hizo de 2026 un año legendario para nosotros.
       </p>
     </section>
   </main>
@@ -445,6 +459,7 @@ const bendyHtml = `<!DOCTYPE html>
         <a href="domititan.html">Domititan</a>
         <a href="bendy.html" class="active">Bendy</a>
         <a href="sunny.html">Sunny</a>
+        <a href="galletita.html">Galletita</a>
         <a href="efra.html">Efra</a>
         <a href="juego.html" class="cta-btn">JUGAR 🎮</a>
       </nav>
@@ -514,6 +529,7 @@ const domititanHtml = `<!DOCTYPE html>
         <a href="domititan.html" class="active">Domititan</a>
         <a href="bendy.html">Bendy</a>
         <a href="sunny.html">Sunny</a>
+        <a href="galletita.html">Galletita</a>
         <a href="efra.html">Efra</a>
         <a href="juego.html" class="cta-btn">JUGAR 🎮</a>
       </nav>
@@ -572,6 +588,7 @@ const sunnyHtml = `<!DOCTYPE html>
         <a href="domititan.html">Domititan</a>
         <a href="bendy.html">Bendy</a>
         <a href="sunny.html" class="active">Sunny</a>
+        <a href="galletita.html">Galletita</a>
         <a href="efra.html">Efra</a>
         <a href="juego.html" class="cta-btn">JUGAR 🎮</a>
       </nav>
@@ -604,7 +621,94 @@ const sunnyHtml = `<!DOCTYPE html>
 </html>`;
 fs.writeFileSync(path.join(baseDir, 'sunny.html'), sunnyHtml, 'utf-8');
 
-// 8. efra.html
+// 8. galletita.html
+const galletitaHtml = `<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galletita — Integrante Especial | OUR FRIENDSHIP 2026</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/sound.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="brand-link"><span>← Volver al Menú</span></a>
+      <nav>
+        <a href="domititan.html">Domititan</a>
+        <a href="bendy.html">Bendy</a>
+        <a href="sunny.html">Sunny</a>
+        <a href="galletita.html" class="active">Galletita</a>
+        <a href="efra.html">Efra</a>
+        <a href="juego.html" class="cta-btn">JUGAR 🎮</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="max-width: 900px;">
+    <div style="display: flex; gap: 32px; align-items: center; flex-wrap: wrap; margin-top: 30px;">
+      <div style="width: 280px; height: 380px; background: #130a21; border-radius: 16px; border: 2px solid #e11d48; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <img src="assets/characters/galletita.png" alt="Galletita" style="max-height: 100%; object-fit: contain;">
+      </div>
+      <div style="flex: 1; min-width: 300px;">
+        <span style="color: #fb7185; font-weight: 700; text-transform: uppercase; font-size: 0.85rem;">Homenaje Individual</span>
+        <h1 style="font-size: 2.8rem; margin: 6px 0;">Galletita 🍪❤️</h1>
+        <p style="color: #fda4af; font-size: 1.15rem; margin-bottom: 16px;">Gatita Oscura & Bufanda Roja · Familia Virtual 2026</p>
+        <p style="color: var(--text-muted); line-height: 1.7;">
+          Una página conmemorativa individual dedicada a Galletita. Su espacio propio dentro de nuestra familia virtual 2026, abierto para guardar recuerdos reales, capturas y momentos compartidos.
+        </p>
+      </div>
+    </div>
+
+    <section style="background: var(--bg-card); border-radius: 16px; border: 1px solid rgba(225, 29, 72, 0.35); padding: 28px; margin-top: 32px;">
+      <h3 style="font-size: 1.5rem; margin-bottom: 12px; color: #fb7185;">Recuerdos y Momentos con Galletita (Editable)</h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">
+        Agrega aquí tus recuerdos reales con Galletita (se guardan automáticamente en este navegador):
+      </p>
+      <ul id="galletita-list" style="list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px;"></ul>
+      <form id="galletita-form" style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <input id="galletita-input" type="text" placeholder="Escribe un recuerdo real con Galletita..." style="flex: 1; min-width: 220px; padding: 10px 14px; border-radius: 10px; border: 1px solid #3d1428; background: #0d071a; color: #fff;">
+        <button type="submit" class="cta-btn" style="background: #e11d48; border: none; cursor: pointer;">+ Añadir</button>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    const KEY = 'our_friendship_2026_galletita_memories';
+    const listEl = document.getElementById('galletita-list');
+    const formEl = document.getElementById('galletita-form');
+    const inputEl = document.getElementById('galletita-input');
+    function load() {
+      let items = [];
+      try { items = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch {}
+      listEl.innerHTML = items.length ? '' : '<li style="color:#a79fc2;font-size:0.9rem;">Aún no hay recuerdos agregados.</li>';
+      items.forEach((txt, i) => {
+        const li = document.createElement('li');
+        li.style.cssText = 'background:#0d071a;border:1px solid #3d1428;padding:10px 14px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;gap:12px;';
+        li.innerHTML = '<span><strong style="color:#fb7185;">#' + (i + 1) + '</strong> ' + txt.replace(/</g, '&lt;') + '</span>';
+        listEl.appendChild(li);
+      });
+    }
+    formEl.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const val = inputEl.value.trim();
+      if (!val) return;
+      let items = [];
+      try { items = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch {}
+      items.push(val);
+      localStorage.setItem(KEY, JSON.stringify(items));
+      inputEl.value = '';
+      if (window.audioSFX) window.audioSFX.playCoin();
+      load();
+    });
+    load();
+  </script>
+</body>
+</html>`;
+fs.writeFileSync(path.join(baseDir, 'galletita.html'), galletitaHtml, 'utf-8');
+
+// 9. efra.html
 const efraHtml = `<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -622,6 +726,7 @@ const efraHtml = `<!DOCTYPE html>
         <a href="domititan.html">Domititan</a>
         <a href="bendy.html">Bendy</a>
         <a href="sunny.html">Sunny</a>
+        <a href="galletita.html">Galletita</a>
         <a href="efra.html" class="active">Efra</a>
         <a href="juego.html" class="cta-btn">JUGAR 🎮</a>
       </nav>
@@ -714,14 +819,14 @@ const ctx = canvas.getContext('2d');
 
 const STAGES = [
   { id: 1, name: 'Bosque de la Amistad', boss: 'Sprout Guardian', unlock: 'sunny', color: '#10b981', sky: '#064e3b' },
-  { id: 2, name: 'Montañas del Discord', boss: 'Glitch Server Bot', unlock: 'efra', color: '#3b82f6', sky: '#1e3a8a' },
-  { id: 3, name: 'Castillo del Silencio', boss: 'El Mute Supremo', unlock: 'bendy', color: '#ea580c', sky: '#7c2d12' },
-  { id: 4, name: 'Reino de las Bromas', boss: 'El Bromista Espectral', unlock: 'recuerdos', color: '#8b5cf6', sky: '#4c1d95' },
-  { id: 5, name: 'Valle de las Risas', boss: 'Gigante de la Risa', unlock: 'galeria', color: '#f59e0b', sky: '#78350f' },
-  { id: 6, name: 'Ciudad de los Recuerdos', boss: 'Memory Phantom', unlock: 'domititan_secreto', color: '#ec4899', sky: '#831843' },
-  { id: 7, name: 'Caverna de las Aventuras', boss: 'Dragón de Cristal', unlock: 'estrellas', color: '#06b6d4', sky: '#164e63' },
-  { id: 8, name: 'Reino de las Estrellas', boss: 'Titán Estelar', unlock: 'momentos', color: '#6366f1', sky: '#312e81' },
-  { id: 9, name: 'Fortaleza del Caos', boss: 'Chaos Overlord', unlock: 'comunidad', color: '#ef4444', sky: '#7f1d1d' },
+  { id: 2, name: 'Reino de las Bromas', boss: 'El Bromista Espectral', unlock: 'galletita', color: '#e11d48', sky: '#4c1d95' },
+  { id: 3, name: 'Montañas del Discord', boss: 'Glitch Server Bot', unlock: 'efra', color: '#3b82f6', sky: '#1e3a8a' },
+  { id: 4, name: 'Castillo del Silencio', boss: 'El Mute Supremo', unlock: 'bendy', color: '#ea580c', sky: '#7c2d12' },
+  { id: 5, name: 'Valle de las Risas', boss: 'Gigante de la Risa', unlock: 'recuerdos', color: '#f59e0b', sky: '#78350f' },
+  { id: 6, name: 'Ciudad de los Recuerdos', boss: 'Memory Phantom', unlock: 'galeria', color: '#ec4899', sky: '#831843' },
+  { id: 7, name: 'Caverna de las Aventuras', boss: 'Dragón de Cristal', unlock: 'domititan_secreto', color: '#06b6d4', sky: '#164e63' },
+  { id: 8, name: 'Reino de las Estrellas', boss: 'Titán Estelar', unlock: 'estrellas', color: '#6366f1', sky: '#312e81' },
+  { id: 9, name: 'Fortaleza del Caos', boss: 'Chaos Overlord', unlock: 'momentos', color: '#ef4444', sky: '#7f1d1d' },
   { id: 10, name: 'El Último Capítulo', boss: 'The 2026 Arbiter', unlock: 'homenaje_final', color: '#a855f7', sky: '#2e1065' }
 ];
 

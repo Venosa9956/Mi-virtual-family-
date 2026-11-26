@@ -38,6 +38,18 @@ const STAGES_DATA: StageConfig[] = [
   },
   {
     id: 2,
+    name: 'Reino de las Bromas',
+    subtitle: 'Plataformas elásticas y risas sin control',
+    bossName: 'El Bromista Espectral',
+    bossTitle: 'Señor del Caos Festivo',
+    themeColor: '#e11d48',
+    skyColorTop: '#4c1d95',
+    skyColorBottom: '#1e0838',
+    rewardKey: 'galletita',
+    rewardText: '¡Página Individual de Galletita Desbloqueada!',
+  },
+  {
+    id: 3,
     name: 'Montañas del Discord',
     subtitle: 'Servidores flotantes y canales de voz desquiciados',
     bossName: 'Glitch Server Bot',
@@ -49,7 +61,7 @@ const STAGES_DATA: StageConfig[] = [
     rewardText: '¡Página de Efra (Lobo de Fuego) Desbloqueada!',
   },
   {
-    id: 3,
+    id: 4,
     name: 'Castillo del Silencio',
     subtitle: 'La fortaleza donde reinan los micrófonos silenciados',
     bossName: 'El Mute Supremo',
@@ -61,18 +73,6 @@ const STAGES_DATA: StageConfig[] = [
     rewardText: '¡Página de Bendy (El Rey del Mute) Desbloqueada!',
   },
   {
-    id: 4,
-    name: 'Reino de las Bromas',
-    subtitle: 'Plataformas elásticas y risas sin control',
-    bossName: 'El Bromista Espectral',
-    bossTitle: 'Señor del Caos Festivo',
-    themeColor: '#a855f7',
-    skyColorTop: '#4c1d95',
-    skyColorBottom: '#1e0838',
-    rewardKey: 'recuerdos',
-    rewardText: '¡Colección de Recuerdos 2026 Desbloqueada!',
-  },
-  {
     id: 5,
     name: 'Valle de las Risas',
     subtitle: 'Donde cada carcajada genera energía cósmica',
@@ -81,8 +81,8 @@ const STAGES_DATA: StageConfig[] = [
     themeColor: '#eab308',
     skyColorTop: '#713f12',
     skyColorBottom: '#2c1804',
-    rewardKey: 'galeria',
-    rewardText: '¡Galería Secreta de Discord Desbloqueada!',
+    rewardKey: 'recuerdos',
+    rewardText: '¡Colección de Recuerdos 2026 Desbloqueada!',
   },
   {
     id: 6,
@@ -93,8 +93,8 @@ const STAGES_DATA: StageConfig[] = [
     themeColor: '#ec4899',
     skyColorTop: '#831843',
     skyColorBottom: '#2d0617',
-    rewardKey: 'domititan_secreto',
-    rewardText: '¡Bóveda Secreta de Domititan Desbloqueada!',
+    rewardKey: 'galeria',
+    rewardText: '¡Galería Secreta de Discord Desbloqueada!',
   },
   {
     id: 7,
@@ -105,8 +105,8 @@ const STAGES_DATA: StageConfig[] = [
     themeColor: '#06b6d4',
     skyColorTop: '#164e63',
     skyColorBottom: '#04212b',
-    rewardKey: 'estrellas',
-    rewardText: '¡Reino de las Estrellas Desbloqueado!',
+    rewardKey: 'domititan_secreto',
+    rewardText: '¡Bóveda Secreta de Domititan Desbloqueada!',
   },
   {
     id: 8,
@@ -117,8 +117,8 @@ const STAGES_DATA: StageConfig[] = [
     themeColor: '#8b5cf6',
     skyColorTop: '#3730a3',
     skyColorBottom: '#130e42',
-    rewardKey: 'momentos',
-    rewardText: '¡Recopilación Épica de Momentos Desbloqueada!',
+    rewardKey: 'estrellas',
+    rewardText: '¡Reino de las Estrellas Desbloqueado!',
   },
   {
     id: 9,
@@ -129,8 +129,8 @@ const STAGES_DATA: StageConfig[] = [
     themeColor: '#ef4444',
     skyColorTop: '#7f1d1d',
     skyColorBottom: '#280606',
-    rewardKey: 'comunidad',
-    rewardText: '¡El Gran Pacto de Amistad Desbloqueado!',
+    rewardKey: 'momentos',
+    rewardText: '¡Recopilación Épica de Momentos Desbloqueada!',
   },
   {
     id: 10,
@@ -1003,7 +1003,8 @@ export const GamePage: React.FC<GamePageProps> = ({ onNavigate, onOpenZipModal }
               <button
                 onClick={() => {
                   setStageClearedModal(null);
-                  onNavigate(currentStage.rewardKey);
+                  const friendPages = ['sunny', 'galletita', 'efra', 'bendy', 'domititan'];
+                  onNavigate(friendPages.includes(currentStage.rewardKey) ? currentStage.rewardKey : 'index');
                 }}
                 className="w-full py-2.5 rounded-xl font-bold text-xs text-purple-200 bg-[#251247] hover:bg-[#381a69] cursor-pointer"
               >

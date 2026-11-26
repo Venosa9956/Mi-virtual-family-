@@ -61,7 +61,7 @@ server.listen(PORT, '127.0.0.1', () => {
   const url = `http://127.0.0.1:${PORT}`;
   console.log(`\n======================================================`);
   console.log(`   💜 OUR FRIENDSHIP — THE 2026 ADVENTURE 💜`);
-  console.log(`   Domititan · Bendy · Sunny · Mini · Efra`);
+  console.log(`   Domititan · Bendy · Sunny · Galletita · Efra`);
   console.log(`======================================================`);
   console.log(`   Servidor local iniciado: ${url}`);
   console.log(`   Abriendo tu navegador automáticamente...`);

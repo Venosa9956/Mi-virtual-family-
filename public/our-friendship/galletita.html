@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galletita — Integrante Especial | OUR FRIENDSHIP 2026</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/sound.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="brand-link"><span>← Volver al Menú</span></a>
+      <nav>
+        <a href="domititan.html">Domititan</a>
+        <a href="bendy.html">Bendy</a>
+        <a href="sunny.html">Sunny</a>
+        <a href="galletita.html" class="active">Galletita</a>
+        <a href="efra.html">Efra</a>
+        <a href="juego.html" class="cta-btn">JUGAR 🎮</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="max-width: 900px;">
+    <div style="display: flex; gap: 32px; align-items: center; flex-wrap: wrap; margin-top: 30px;">
+      <div style="width: 280px; height: 380px; background: #130a21; border-radius: 16px; border: 2px solid #e11d48; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <img src="assets/characters/galletita.png" alt="Galletita" style="max-height: 100%; object-fit: contain;">
+      </div>
+      <div style="flex: 1; min-width: 300px;">
+        <span style="color: #fb7185; font-weight: 700; text-transform: uppercase; font-size: 0.85rem;">Homenaje Individual</span>
+        <h1 style="font-size: 2.8rem; margin: 6px 0;">Galletita 🍪❤️</h1>
+        <p style="color: #fda4af; font-size: 1.15rem; margin-bottom: 16px;">Gatita Oscura & Bufanda Roja · Familia Virtual 2026</p>
+        <p style="color: var(--text-muted); line-height: 1.7;">
+          Una página conmemorativa individual dedicada a Galletita. Su espacio propio dentro de nuestra familia virtual 2026, abierto para guardar recuerdos reales, capturas y momentos compartidos.
+        </p>
+      </div>
+    </div>
+
+    <section style="background: var(--bg-card); border-radius: 16px; border: 1px solid rgba(225, 29, 72, 0.35); padding: 28px; margin-top: 32px;">
+      <h3 style="font-size: 1.5rem; margin-bottom: 12px; color: #fb7185;">Recuerdos y Momentos con Galletita (Editable)</h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">
+        Agrega aquí tus recuerdos reales con Galletita (se guardan automáticamente en este navegador):
+      </p>
+      <ul id="galletita-list" style="list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px;"></ul>
+      <form id="galletita-form" style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <input id="galletita-input" type="text" placeholder="Escribe un recuerdo real con Galletita..." style="flex: 1; min-width: 220px; padding: 10px 14px; border-radius: 10px; border: 1px solid #3d1428; background: #0d071a; color: #fff;">
+        <button type="submit" class="cta-btn" style="background: #e11d48; border: none; cursor: pointer;">+ Añadir</button>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    const KEY = 'our_friendship_2026_galletita_memories';
+    const listEl = document.getElementById('galletita-list');
+    const formEl = document.getElementById('galletita-form');
+    const inputEl = document.getElementById('galletita-input');
+    function load() {
+      let items = [];
+      try { items = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch {}
+      listEl.innerHTML = items.length ? '' : '<li style="color:#a79fc2;font-size:0.9rem;">Aún no hay recuerdos agregados.</li>';
+      items.forEach((txt, i) => {
+        const li = document.createElement('li');
+        li.style.cssText = 'background:#0d071a;border:1px solid #3d1428;padding:10px 14px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;gap:12px;';
+        li.innerHTML = '<span><strong style="color:#fb7185;">#' + (i + 1) + '</strong> ' + txt.replace(/</g, '&lt;') + '</span>';
+        listEl.appendChild(li);
+      });
+    }
+    formEl.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const val = inputEl.value.trim();
+      if (!val) return;
+      let items = [];
+      try { items = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch {}
+      items.push(val);
+      localStorage.setItem(KEY, JSON.stringify(items));
+      inputEl.value = '';
+      if (window.audioSFX) window.audioSFX.playCoin();
+      load();
+    });
+    load();
+  </script>
+</body>
+</html>

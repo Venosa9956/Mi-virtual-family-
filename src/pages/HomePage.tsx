@@ -99,7 +99,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenZipModal }
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#231245] border border-[#4c1d95] text-xs font-semibold text-[#c084fc] mb-6">
             <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-            Homenaje Virtual 2026 — Domititan, Bendy, Sunny, Efra
+            Homenaje Virtual 2026 — Domititan, Bendy, Sunny, Galletita, Efra
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-[#e9d5ff] to-[#c084fc] mb-5 leading-tight">
@@ -160,7 +160,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenZipModal }
               </p>
             </div>
             <div className="text-xs text-[#c084fc] font-mono">
-              4 Integrantes Oficiales 2026
+              5 Integrantes Oficiales 2026
             </div>
           </div>
 

@@ -68,6 +68,14 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenZ
             Sunny ☀️
           </button>
           <button
+            onClick={() => onNavigate('galletita')}
+            className={`transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
+              currentPage === 'galletita' ? 'text-white font-semibold underline underline-offset-8 decoration-[#e11d48]' : 'hover:text-white'
+            }`}
+          >
+            Galletita 🍪❤️
+          </button>
+          <button
             onClick={() => onNavigate('efra')}
             className={`transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
               currentPage === 'efra' ? 'text-white font-semibold underline underline-offset-8 decoration-[#dc2626]' : 'hover:text-white'
@@ -147,6 +155,12 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenZ
           className={`whitespace-nowrap px-2 py-1 rounded ${currentPage === 'sunny' ? 'text-white bg-[#2e1065]' : ''}`}
         >
           Sunny
+        </button>
+        <button
+          onClick={() => onNavigate('galletita')}
+          className={`whitespace-nowrap px-2 py-1 rounded ${currentPage === 'galletita' ? 'text-white bg-[#2e1065]' : ''}`}
+        >
+          Galletita
         </button>
         <button
           onClick={() => onNavigate('efra')}

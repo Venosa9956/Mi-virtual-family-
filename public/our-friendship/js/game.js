@@ -4,14 +4,14 @@ const ctx = canvas.getContext('2d');
 
 const STAGES = [
   { id: 1, name: 'Bosque de la Amistad', boss: 'Sprout Guardian', unlock: 'sunny', color: '#10b981', sky: '#064e3b' },
-  { id: 2, name: 'Montañas del Discord', boss: 'Glitch Server Bot', unlock: 'efra', color: '#3b82f6', sky: '#1e3a8a' },
-  { id: 3, name: 'Castillo del Silencio', boss: 'El Mute Supremo', unlock: 'bendy', color: '#ea580c', sky: '#7c2d12' },
-  { id: 4, name: 'Reino de las Bromas', boss: 'El Bromista Espectral', unlock: 'recuerdos', color: '#8b5cf6', sky: '#4c1d95' },
-  { id: 5, name: 'Valle de las Risas', boss: 'Gigante de la Risa', unlock: 'galeria', color: '#f59e0b', sky: '#78350f' },
-  { id: 6, name: 'Ciudad de los Recuerdos', boss: 'Memory Phantom', unlock: 'domititan_secreto', color: '#ec4899', sky: '#831843' },
-  { id: 7, name: 'Caverna de las Aventuras', boss: 'Dragón de Cristal', unlock: 'estrellas', color: '#06b6d4', sky: '#164e63' },
-  { id: 8, name: 'Reino de las Estrellas', boss: 'Titán Estelar', unlock: 'momentos', color: '#6366f1', sky: '#312e81' },
-  { id: 9, name: 'Fortaleza del Caos', boss: 'Chaos Overlord', unlock: 'comunidad', color: '#ef4444', sky: '#7f1d1d' },
+  { id: 2, name: 'Reino de las Bromas', boss: 'El Bromista Espectral', unlock: 'galletita', color: '#e11d48', sky: '#4c1d95' },
+  { id: 3, name: 'Montañas del Discord', boss: 'Glitch Server Bot', unlock: 'efra', color: '#3b82f6', sky: '#1e3a8a' },
+  { id: 4, name: 'Castillo del Silencio', boss: 'El Mute Supremo', unlock: 'bendy', color: '#ea580c', sky: '#7c2d12' },
+  { id: 5, name: 'Valle de las Risas', boss: 'Gigante de la Risa', unlock: 'recuerdos', color: '#f59e0b', sky: '#78350f' },
+  { id: 6, name: 'Ciudad de los Recuerdos', boss: 'Memory Phantom', unlock: 'galeria', color: '#ec4899', sky: '#831843' },
+  { id: 7, name: 'Caverna de las Aventuras', boss: 'Dragón de Cristal', unlock: 'domititan_secreto', color: '#06b6d4', sky: '#164e63' },
+  { id: 8, name: 'Reino de las Estrellas', boss: 'Titán Estelar', unlock: 'estrellas', color: '#6366f1', sky: '#312e81' },
+  { id: 9, name: 'Fortaleza del Caos', boss: 'Chaos Overlord', unlock: 'momentos', color: '#ef4444', sky: '#7f1d1d' },
   { id: 10, name: 'El Último Capítulo', boss: 'The 2026 Arbiter', unlock: 'homenaje_final', color: '#a855f7', sky: '#2e1065' }
 ];
 
